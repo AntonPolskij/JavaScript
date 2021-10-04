@@ -1,0 +1,155 @@
+<!-- Задание №1
+var a = 1, b = 1, c, d;
+c = ++a; alert(c); // 2 - результат 2, так как используется префиксная форма инкремента(сначала производится
+инкрементирование, после присваивание).
+d = b++; alert(d); // 1 - так как форма инкремента постфиксная, сначала произошло присваивание, а после
+инкрементирование.
+c = (2+ ++a); alert(c); // 5 - переменная а равна двум после 3ей строки кода и плюс префиксная форма инкремента,
+следовательно переменная а в данном примере до присваивания равна 3. И плюс 2, следовательно ответ 5.
+d = (2+ b++); alert(d); // 4 - здесь изначальное значение b после 5 строки кода равно 2 и постфиксная форма инкремента,
+следовательно инкрементирование происходит после возврата, следовательно 2 + 2 равно 2.
+alert(a); // 3 После всех инкрементирований в строках 3 и 4, переменная а равна 3.
+alert(b); // 3 После всех инкрементирований в строках 5 и 7, переменная b равна 3.
+
+Задание №2
+var a = 2;
+var x = 1 + (a *= 2);
+alert(x); // Ответ 5 -->
+
+<!-- Задание №3 -->
+<script>
+    var a = parseInt(5);
+    var b = parseInt(2);
+    if (a > 0 && b > 0) {
+        console.log(a - b);
+    } else if (a < 0 && b < 0) {
+        console.log(a * b);
+    } else {
+        console.log(a + b);
+    }
+</script>
+
+<!-- Задание №4 -->
+<script>
+    var a = 0;
+    switch (a) {
+        case 0:
+            console.log(a);
+            a++;
+        case 1:
+            console.log(a);
+            a++;
+        case 2:
+            console.log(a);
+            a++;
+        case 3:
+            console.log(a);
+            a++;
+        case 4:
+            console.log(a);
+            a++;
+        case 5:
+            console.log(a);
+            a++;
+        case 6:
+            console.log(a);
+            a++;
+        case 7:
+            console.log(a);
+            a++;
+        case 8:
+            console.log(a);
+            a++;
+        case 9:
+            console.log(a);
+            a++;
+        case 10:
+            console.log(a);
+            a++;
+        case 11:
+            console.log(a);
+            a++;
+        case 12:
+            console.log(a);
+            a++;
+        case 13:
+            console.log(a);
+            a++;
+        case 14:
+            console.log(a);
+            a++;
+        default:
+            console.log(a);
+    }
+</script>
+<!-- Задание №5 + Задание №6 -->
+<script>
+    function sum(a, b) {
+        return a + b;
+    }
+    function mult(a, b) {
+        return a * b;
+    }
+    function minus(a, b) {
+        return a - b;
+    }
+    function del(a, b) {
+        return a / b;
+    }
+
+    function mathOperation(arg1, arg2, operation) {
+        switch (operation) {
+            case "sum":
+                console.log(sum(arg1, arg2));
+                break;
+            case "mult":
+                console.log(mult(arg1, arg2));
+                break;
+            case "minus":
+                console.log(minus(arg1, arg2));
+                break;
+            case "del":
+                console.log(del(arg1, arg2));
+                break;
+            default:
+                console.log("Ошибка");
+        }
+    }
+
+    mathOperation(1, 5, "sum");
+    mathOperation(8, 9, "del");
+    mathOperation(13, 2, "mult");
+    mathOperation(100, 214, "minus");
+    mathOperation(1, 2, "asdasd");
+</script>
+
+<!-- Задание №7 -->
+<script>
+
+    console.log(null >= 0);// true
+    console.log(null < 0); // false
+    console.log(null == 0); // false
+
+//  Поискав и почитав статьи в интернете, не нашел разумного ответа.Из этого сделал вывод, что это нужно запомнить как правило(null =< 0 - true, null >= 0 - true и то, что null == undefined и не равны ничему другому.)
+
+</script>
+
+<!-- Задание №8 -->
+<script>
+    function power(val, pow) {
+        if (pow == 1) {
+            return val;
+        } else if (pow == 0) {
+            return 1;
+        } else {
+            return val * power(val, pow - 1);
+        }
+    }
+    console.log(power(2, 0));
+    console.log(power(2, 1));
+    console.log(power(2, 2));
+    console.log(power(2, 3));
+    console.log(power(2, 4));
+    console.log(power(2, 5));
+    // Не разобрался как возводить в степень с отрицательным значением.
+</script>
