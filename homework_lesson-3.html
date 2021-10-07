@@ -1,0 +1,75 @@
+<!-- Задание № 1 -->
+
+<script>
+    function isPrime(num) {
+        for (var i = 2; i < num; i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return num > 1;
+    }
+    var n = 0;
+    while (n < 101) {
+        if (isPrime(n)) {
+            console.log(n);
+        }
+        n++;
+    }
+</script>
+
+
+<!-- Задание № 2 и Задание № 3 -->
+
+<script>
+    var mas = [
+        {
+            title: 'Товар 1',
+            price: 1000,
+            count: 1
+        },
+        {
+            title: 'Товар 2',
+            price: 2000,
+            count: 2
+        },
+        {
+            title: 'Товар 3',
+            price: 3000,
+            count: 3
+        },
+        {
+            title: 'Товар 4',
+            price: 4000,
+            count: 4
+        },
+    ];
+
+    function countBasketPrice(arr) {
+        var sum = 0;
+        for (var i = 0; i < arr.length; i++) {
+            sum += arr[i].price * arr[i].count;
+        }
+        return 'Сумма: ' + sum + 'р';
+    }
+
+    console.log(countBasketPrice(mas));
+</script>
+
+
+<!-- Задание №4 -->
+
+<script>
+    for (var i = 0; i < 10; console.log(i), i++) { }
+</script>
+
+
+<!-- Задание №5 -->
+
+<script>
+    var n = 'x';
+    for (var i = 1; i <= 20; i++) {
+        console.log(n);
+        n += 'x';
+    }
+</script>
