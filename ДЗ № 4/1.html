@@ -1,0 +1,38 @@
+<script>
+    var obj = {};
+    var a = prompt("Введите число(max-999)");
+    inObject(a);
+    console.log(obj);
+    function inObject(x) {
+        if (isNaN(x)) {
+            while (isNaN(x)) {
+                alert('Ошибка! Вы ввели не число.');
+                x = prompt("Введите число(max-999)");
+            }
+            if (x.length > 3) {
+                alert('Число ' + x + ' больше трехзначного числа');
+                return obj;
+            }
+        } else if (x.length > 3) {
+            alert('Число ' + x + ' больше трехзначного числа');
+            return obj;
+        }
+        switch (x.length) {
+            case 1:
+                obj.ed = x;
+                break;
+            case 2:
+                obj.ed = x[1];
+                obj.des = x[0];
+                break;
+            case 3:
+                obj.ed = x[2];
+                obj.des = x[1];
+                obj.sot = x[0];
+                break;
+            default:
+                break;
+        }
+        return obj;
+    }
+</script>
