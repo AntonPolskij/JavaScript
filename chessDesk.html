@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        td {
+            font-size: 40px;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            vertical-align: middle;
+            background-color: sandybrown;
+        }
+
+        .numbers,
+        .letters {
+            font-size: 20px;
+            border: none;
+            background-color: white;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        button {
+            padding: 10px;
+            background: none;
+            font-size: 25px;
+            margin: 150px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button onclick="createChessDesk(); style.display = 'none'"> Создать доску </button>
+
+    <script>
+        function createChessDesk() {
+            var letters = ['', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', ''];
+            var figures = ["", "&#9820;", "&#9822;", "&#9821;", "&#9819;", "&#9818;", "&#9821;", "&#9822;", "&#9820;", ""];
+            var row, cell;
+            var table = document.createElement('table');
+            document.querySelector('body').append(table);
+            for (var i = 0; i < 10; i++) {
+                row = document.createElement('tr');
+                table.append(row);
+                for (var j = 0; j < 10; j++) {
+                    cell = document.createElement('td');
+                    if (i == 0 || i == 9) {
+                        cell.innerText = letters[j];
+                        cell.className = 'letters';
+                        if (i == 0) {
+                            cell.style.transform = 'rotate(180deg)';
+                        }
+                    }
+                    if ((j == 0 || j == 9) && (i != 0 && i != 9)) {
+                        cell.innerText = i;
+                        cell.className = 'numbers';
+                        if (j == 9) {
+                            cell.style.transform = 'rotate(180deg)';
+                        }
+                    }
+                    if (i > 0 && i < 9 && j > 0 && j < 9) {
+                        if (i % 2 == j % 2) {
+                            cell.style.backgroundColor = 'brown';
+                        }
+                        if (i == 1 || i == 8) {
+                            cell.innerHTML = figures[j];
+                            if (i == 8) {
+                                cell.style.color = 'white';
+                            }
+                        }
+                        if (i == 2 || i == 7) {
+                            cell.innerHTML = '&#9817;';
+                            if (i == 7) {
+                                cell.style.color = 'white';
+                            }
+                        }
+                    }
+                    row.append(cell);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
