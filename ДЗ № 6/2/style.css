@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: beige;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+hr {
+    height: 10px;
+    background-color: black;
+    margin: 30px 0;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.item__name {
+    font-size: 30px;
+    margin-right: 50px;
+    border-bottom: 2px solid black;
+}
+.item__price {
+    font-size: 15px;
+    font-weight: 700;
+
+}
+.cart__sum {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 30px;
+}
