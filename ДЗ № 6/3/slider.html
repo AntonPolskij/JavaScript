@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slider {
+            display: flex;
+            justify-content: center;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="slider">
+        <img src="p0.png" alt="1">
+    </div>
+    <div class="buttons">
+        <button class=back onclick="b ()">Назад</button>
+        <button class="forward" onclick="f()">Вперед</button>
+    </div>
+
+    <script>
+        var slider = document.querySelector('.slider');
+        var images = ['p0.png', 'p1.png', 'p2.png'];
+        var index = 0;
+        function b() {
+            var img = document.createElement('img');
+            slider.innerHTML = '';
+            if (index == 0) {
+                index = images.length - 1;
+            } else {
+                index--;
+            }
+            img.src = images[index];
+            slider.append(img);
+        }
+        function f() {
+            var img = document.createElement('img');
+            slider.innerHTML = '';
+            if (index == (images.length - 1)) {
+                index = 0;
+            } else {
+                index++;
+            }
+            img.src = images[index];
+            slider.append(img);
+        }
+
+    </script>
+
+</body>
+
+</html>
