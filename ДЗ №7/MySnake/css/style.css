@@ -1,0 +1,79 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.heading {
+  border-bottom: 5px solid black;
+}
+
+.snake-field {
+  width: calc(20px*20);
+  height: calc(20px*20);
+}
+
+.field-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.field-cell {
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.snake-cell {
+  background-color: black;
+}
+
+.food-cell {
+  background-color: chartreuse;
+}
+
+.bomb-cell {
+  background-color: red;
+}
+
+.start {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: white;
+  border: none;
+  border: 1px solid black;
+}
+
+.start:hover {
+  -webkit-animation: btn-scale 1s 1 forwards;
+          animation: btn-scale 1s 1 forwards;
+}
+
+@-webkit-keyframes btn-scale {
+  100% {
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+    -webkit-box-shadow: -10px 10px 3px #969393;
+            box-shadow: -10px 10px 3px #969393;
+  }
+}
+
+@keyframes btn-scale {
+  100% {
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+    -webkit-box-shadow: -10px 10px 3px #969393;
+            box-shadow: -10px 10px 3px #969393;
+  }
+}
+/*# sourceMappingURL=style.css.map */

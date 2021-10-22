@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.heading {
+    border-bottom: 5px solid black;
+}
+.snake-field {
+    width: calc(20px*20);
+    height: calc(20px*20);
+}
+.field-row {
+    display: flex;
+}
+.field-cell {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+.snake-cell {
+    background-color: black;
+}
+.food-cell {
+    background-color: chartreuse;
+}
+.bomb-cell {
+    background-color: red;
+}
+.start {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: white;
+    border: none;
+    border: 1px solid black;
+}
+.start:hover {
+    animation: btn-scale 1s 1 forwards;
+    @keyframes btn-scale {
+        100% {
+            transform:scale(1.25);
+            box-shadow: -10px 10px 3px rgb(150, 147, 147);
+        }
+    }
+}
