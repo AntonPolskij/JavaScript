@@ -1,0 +1,32 @@
+1.
+if (!("a" in window)) {
+    var a = 1;
+}
+alert(a);                 Ответ: undefined
+
+2.
+var b = function a(x) {
+    x && a(--x);
+};
+alert(a);                 Ответ: undefined
+
+3.
+function a(x) {
+    return x * 2;
+}
+var a;
+alert(a);                Ответ: f a(x) {
+                                    return x*2;
+                                }
+4.
+function b(x, y, a) {
+    arguments[2] = 10;
+    alert(a);
+}
+b(1, 2, 3);              Ответ: 10  Потому что arguments[2] - a, и во второй строке мы а присваиваем значение 10.
+
+5.
+function a() {
+    alert(this);
+}
+a.call(null);            Ответ: window Потому что если в функции this, то эта функция передается объектам, и по умолчанию глобальным объектом является window.
